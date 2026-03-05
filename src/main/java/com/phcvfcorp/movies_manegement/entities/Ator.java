@@ -1,18 +1,25 @@
-package com.phcvfcorp.entities;
+package com.phcvfcorp.movies_manegement.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "cf_ator")
 public class Ator {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    @Column(unique = true)
     private String nome;
 
     public Ator(){
@@ -26,25 +33,6 @@ public class Ator {
     public Ator(Long id, String nome){
         this.id = id;
         this.nome = nome;
-    }
-
-    // get & set Nome
-    public String getNome(){
-        return nome;
-    }
-
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-
-
-    // get & set ID
-    public Long getId(){
-        return id;
-    }
-
-    public void setId(Long id){
-        this.id = id;
     }
 
 }
