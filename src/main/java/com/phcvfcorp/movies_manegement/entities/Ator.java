@@ -23,7 +23,7 @@ public class Ator {
     private String nome;
 
     public Ator(){
-
+        
     }
     
     public Ator(String nome){

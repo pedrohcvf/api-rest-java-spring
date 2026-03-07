@@ -27,7 +27,6 @@ public class Diretor {
     }
 
     public Diretor(String nome){
-        super();
         this.nome = nome;
     }
 
