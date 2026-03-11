@@ -10,6 +10,9 @@ import com.phcvfcorp.movies_manegement.entities.Diretor;
 
 @Repository
 public interface DiretorRepository extends JpaRepository<Diretor, Long> {
-    public List<Diretor> findByOrderByNome();
+    public List<Diretor> findByOrderByNomeAsc();
     public Diretor getReferenceByNome(String nome);
+
+
+    String nome(String nome);
 }

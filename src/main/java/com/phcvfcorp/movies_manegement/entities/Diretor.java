@@ -1,5 +1,6 @@
 package com.phcvfcorp.movies_manegement.entities;
 
+import com.phcvfcorp.movies_manegement.dtos.DiretorDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,4 +37,6 @@ public class Diretor {
     }
 
 
+    public Diretor(DiretorDto diretor) {
+    }
 }

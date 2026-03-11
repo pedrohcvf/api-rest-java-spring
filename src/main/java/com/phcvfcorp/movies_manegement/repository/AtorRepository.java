@@ -10,4 +10,8 @@ import com.phcvfcorp.movies_manegement.entities.Ator;
 @Repository
 public interface AtorRepository extends JpaRepository<Ator, Long>  {
     public List<Ator> findByOrderByNomeAsc();
+
+    public Ator getReferenceByNome(String nome);
+
+    Ator findByNome(String nome);
 }
