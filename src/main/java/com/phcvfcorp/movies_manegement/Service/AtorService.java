@@ -1,9 +1,9 @@
 package com.phcvfcorp.movies_manegement.Service;
 
-import com.phcvfcorp.movies_manegement.dtos.AtorDto;
-import com.phcvfcorp.movies_manegement.entities.Ator;
+import com.phcvfcorp.movies_manegement.Dtos.AtorDto;
+import com.phcvfcorp.movies_manegement.Entities.Ator;
 
-import com.phcvfcorp.movies_manegement.repository.AtorRepository;
+import com.phcvfcorp.movies_manegement.Repository.AtorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -51,9 +51,4 @@ public class AtorService {
         }
         return atores;
     }
-
-
-
-
-
 }

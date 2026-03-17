@@ -1,13 +1,8 @@
-package com.phcvfcorp.movies_manegement.entities;
+package com.phcvfcorp.movies_manegement.Entities;
 
 import java.util.Set;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,9 +21,9 @@ public class Filme {
     private Long id;
 
     private String nome;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Diretor diretor;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private Set<Ator> elenco;
     private Float nota;
 

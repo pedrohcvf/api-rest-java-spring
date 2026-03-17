@@ -1,8 +1,8 @@
 package com.phcvfcorp.movies_manegement.Service;
 
-import com.phcvfcorp.movies_manegement.dtos.DiretorDto;
-import com.phcvfcorp.movies_manegement.entities.Diretor;
-import com.phcvfcorp.movies_manegement.repository.DiretorRepository;
+import com.phcvfcorp.movies_manegement.Dtos.DiretorDto;
+import com.phcvfcorp.movies_manegement.Entities.Diretor;
+import com.phcvfcorp.movies_manegement.Repository.DiretorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

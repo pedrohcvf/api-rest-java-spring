@@ -1,6 +1,6 @@
-package com.phcvfcorp.movies_manegement.entities;
+package com.phcvfcorp.movies_manegement.Entities;
 
-import com.phcvfcorp.movies_manegement.dtos.AtorDto;
+import com.phcvfcorp.movies_manegement.Dtos.AtorDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,8 +8,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -23,23 +26,19 @@ public class Ator {
     @Column(unique = true)
     private String nome;
 
-    //Construtor 1
-    public Ator(){
-        
-    }
 
-    //Construtor 2
+    // CONSTRUTOR 1
     public Ator(String nome){
         this.nome = nome;
     }
 
-    //Construtor 3
+    // CONSTRUTOR 2
     public Ator(Long id, String nome){
         this.id = id;
         this.nome = nome;
     }
 
-    //Construtor 4
+    // CONSTRUTOR 3
     public Ator(AtorDto ator){
         this.nome = ator.getNome();
     }

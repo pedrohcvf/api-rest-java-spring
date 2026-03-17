@@ -1,14 +1,14 @@
 package com.phcvfcorp.movies_manegement.Service;
 
-import com.phcvfcorp.movies_manegement.dtos.AtorDto;
-import com.phcvfcorp.movies_manegement.dtos.DiretorDto;
-import com.phcvfcorp.movies_manegement.dtos.FilmeDto;
-import com.phcvfcorp.movies_manegement.entities.Ator;
-import com.phcvfcorp.movies_manegement.entities.Diretor;
-import com.phcvfcorp.movies_manegement.entities.Filme;
-import com.phcvfcorp.movies_manegement.repository.AtorRepository;
-import com.phcvfcorp.movies_manegement.repository.DiretorRepository;
-import com.phcvfcorp.movies_manegement.repository.FilmeRepository;
+import com.phcvfcorp.movies_manegement.Dtos.AtorDto;
+import com.phcvfcorp.movies_manegement.Dtos.DiretorDto;
+import com.phcvfcorp.movies_manegement.Dtos.FilmeDto;
+import com.phcvfcorp.movies_manegement.Entities.Ator;
+import com.phcvfcorp.movies_manegement.Entities.Diretor;
+import com.phcvfcorp.movies_manegement.Entities.Filme;
+import com.phcvfcorp.movies_manegement.Repository.AtorRepository;
+import com.phcvfcorp.movies_manegement.Repository.DiretorRepository;
+import com.phcvfcorp.movies_manegement.Repository.FilmeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +29,7 @@ public class FilmeService {
     private DiretorRepository diretorRepository;
 
     // ADICIONAR FILME
+    @Transactional(readOnly = false)
     public boolean addFilme(FilmeDto filme) {
 
         Diretor diretorExistente = diretorRepository.getReferenceByNome(filme.getDiretor().getNome());
@@ -64,6 +65,7 @@ public class FilmeService {
     }
 
     // LISTAR FILMES
+    @Transactional(readOnly = true)
     public List<FilmeDto> listarFilmePorNome() {
 
         List<Filme> filmesDoBanco = this.filmeRepository.findByOrderByNomeAsc();
